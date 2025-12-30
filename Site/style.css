@@ -1,0 +1,228 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  background: #0d0f14;
+  color: #ffffff;
+
+  font-family: system-ui, sans-serif;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#particles-js {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: auto;
+}
+
+.navbar {
+  background: rgba(12, 11, 11, 0.9);
+  backdrop-filter: blur(6px);
+}
+
+.search-input {
+  width: 220px;
+}
+
+.hero {
+  margin-top: 4rem;
+  padding: clamp(60px, 12vw, 120px) 1rem;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.logo {
+  max-width: 180px;
+  margin-bottom: 1.5rem;
+}
+
+.spacer {
+  height: 45vh;
+}
+
+.reveal-wrap {
+  position: relative;
+  width: min(900px, 90vw);
+  height: 480px;
+  margin: 0 auto;
+}
+.reveal-img {
+  width: 420px;
+  max-width: 70vw;
+  height: auto;
+
+  position: absolute;
+  top: 50%;
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+}
+
+.left-img {
+  left: 0;
+  transform: translate(-200%, -50%);
+}
+
+.right-img {
+  right: 0;
+  transform: translate(200%, -50%);
+}
+
+.left-img.active {
+  opacity: 1;
+  transform: translate(-130px, -50%);
+}
+
+.right-img.active {
+  opacity: 1;
+  transform: translate(130px, -50%);
+}
+.reveal-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 320px;
+
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  color: rgba(255, 255, 255, 0.85);
+}
+.left-text {
+  left: 100%;
+  transform: translate(40px, -50%);
+  text-align: left;
+}
+
+.right-text {
+  right: 100%;
+  transform: translate(40px, -50%);
+  text-align: right;
+}
+.left-text.active {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+.right-text.active {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+.apple-scroll {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  cursor: pointer;
+}
+
+.apple-scroll .line {
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.apple-scroll .arrow {
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  transform: rotate(45deg);
+  animation: appleMove 1.6s ease-in-out infinite;
+}
+
+@keyframes appleMove {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-4px, -4px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(4px, 4px);
+  }
+}
+
+.apple-scroll.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.reveal-text {
+  position: absolute;
+  max-width: 300px;
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.left-text {
+  left: -450px;
+  text-align: right;
+  transform: translateX(-20px);
+}
+
+.right-text {
+  right: -450px;
+  text-align: left;
+  transform: translateX(20px);
+}
+
+.reveal-text.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 992px) {
+  .reveal-wrap {
+    height: auto;
+  }
+
+  .reveal-block {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .reveal-img {
+    position: static;
+    width: min(300px, 80vw);
+    opacity: 1;
+    transform: none !important;
+  }
+
+  .reveal-text {
+    position: static;
+    max-width: 90%;
+    opacity: 1;
+    transform: none !important;
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  .search-input {
+    width: 140px;
+  }
+}

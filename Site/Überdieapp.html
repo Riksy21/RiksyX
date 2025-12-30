@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Riksy</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="Aboutstyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+  </head>
+
+  <body>
+    <div id="particles-js"></div>
+
+    <nav class="navbar navbar-light">
+      <div
+        class="container-fluid d-flex justify-content-between align-items-center"
+      >
+        <button
+          class="btn btn-outline-secondary"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#verticalMenu"
+        >
+          ☰
+        </button>
+
+        <form class="d-flex align-items-center" role="search">
+          <input
+            class="form-control search-input"
+            type="search"
+            placeholder="Suchen... "
+          />
+          <button class="btn btn-outline-secondary ms-2" type="submit">
+            GO!
+          </button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="verticalMenu">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+
+      <div class="offcanvas-body p-0">
+        <div class="nav flex-column nav-pills">
+            
+          </button>
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#home">
+            <a href="index.html">Home</a>
+          </button>
+          <button
+            class="nav-link active"
+            data-bs-toggle="pill"
+            data-bs-target="#profile"
+          >
+            Über die App
+          </button>
+          <button
+            class="nav-link"
+            data-bs-toggle="pill"
+            data-bs-target="#messages"
+          >
+           <a href="Hilfe&Support.html">Hilfe & Support</a> 
+          </button>
+          <button
+            class="nav-link"
+            data-bs-toggle="pill"
+            data-bs-target="#settings"
+          >
+            Einstellungen
+          </button>
+        </div>
+      </div>
+    </div>
+    <h1 class="title">Über die App</h1>
+    <div class="content-box">
+    <p>Unsere App wurde entwickelt, um jede Fahrt angenehmer zu machen egal, ob du ein erfahrener Fahrer bist oder erst am Anfang stehst.
+Gerade auf langen Strecken oder bei spontanen Reisen zählt Komfort, Planung und ein gutes Gefühl unterwegs.
+</p>
+<p>
+  Riksy hilft dir dabei, deine Fahrtkosten im Blick zu behalten, berechnet Ausgaben für Sprit und Strecke und zeigt dir den bequemsten und sinnvollsten Weg.
+Die App schlägt dir vor, wo du unterwegs tanken, eine Pause einlegen oder etwas essen kannst, und unterstützt dich dabei, deine Reise stressfrei zu gestalten.
+</p>
+<p>Egal ob Wochenendtrip, Kurzurlaub oder geschäftliche Fahrt in eine andere Stadt – Riksy ist dein verlässlicher Begleiter.
+Wir haben eine App geschaffen, die mitdenkt, dich unterstützt und dafür sorgt, dass du dich auf das Wesentliche konzentrieren kannst: die Fahrt selbst.
+</p>
+<p>Mit Riksy bist du besser vorbereitet, entspannter unterwegs und kommst sicher und komfortabel ans Ziel.
+Plane deine nächste Fahrt gemeinsam mit Riksy – und mach jede Reise ein Stück angenehmer</p>
+    </div>
+<div class="row">
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Video über Riksy ansehen</h5>
+        <p class="card-text">Entdecke die Funktionen unseres Projekts.</p>
+        <a href="#" class="btn btn-primary">YouTube.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">App herunterladen</h5>
+        <p class="card-text">Bereit, unsere App auszuprobieren? Dann klick hier!</p>
+        <a href="#" class="btn btn-primary">Download</a>
+      </div>
+    </div>
+  </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 50, density: { enable: true, value_area: 800 } },
+          color: { value: "#ffffff" },
+          opacity: { value: 0.25 },
+          size: { value: 2 },
+          line_linked: { enable: true, opacity: 0.15 },
+          move: { enable: true, speed: 0.8 },
+        },
+      });
+    </script>
+  </body>
+</html>
